@@ -1,0 +1,6 @@
+*.csv
+*.txt
+venv/
+__pycache__/
+ProfileChrome/
+Base/
