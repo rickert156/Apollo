@@ -63,5 +63,5 @@ def recordingResultFirstStep(domain, link):
     global FIRST_STEP_DIR, FIRST_STEP_FILE, firstStepPath
     with open(firstStepPath, 'a+') as file:
         write = csv.writer(file)
-        write.writerow(f'{domain},{link}')
+        write.writerow([domain, link])
 
