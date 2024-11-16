@@ -39,7 +39,8 @@ def createStartDir():
             write.writerow(['Name', 'Email', 'Job Title', 'Company', 'Phone', 'Location'])
     if not os.path.exists(COMPLETE_PATH):
         with open(COMPLETE_PATH, 'a') as file:
-            file.write('Link\n')
+            write = csv.writer(file)
+            write.writerow(['Link'])
 
 # Содаем временную директорию для хранения данных
 def createTempDir():
