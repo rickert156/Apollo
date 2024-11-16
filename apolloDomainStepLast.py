@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 import time, csv
 from tools.miniTools import createStartDir, firstStepPath, moveLink, LIST_LINK_DONE, readDoneLink 
+from tools.parser import parserName, parserJobTitle, parserLocation, parserCompany
 
 profileChrome = 'ProfileChrome'
 
@@ -17,6 +18,12 @@ chrome_options.add_argument("start-maximized")
 
 driver = webdriver.Chrome(options=chrome_options)
 
+def lead(driver):
+    name = parserName(driver);print(f'Name: {name}')
+    job = parserJobTitle(driver);print(f'Job Title: {job}')
+    company = parserCompany(driver);print(f'Company: {company}')
+    location = parserLocation(driver);print(f'Location: {location}')
+
 def main():
     readDoneLink()
     driver.get('https://app.apollo.io/#/')
@@ -28,12 +35,14 @@ def main():
             if link not in LIST_LINK_DONE:
                 number_link+=1
                 print(f'[{number_link}] {link}')
-                
+                driver.get(link) 
+                time.sleep(10)
                 # Вот тут будет функция основного парсера
                 # После него будет срабатывать moveLink
-                
+                lead(driver)
                 moveLink(link)
-                time.sleep(1)
+                #time.sleep(10)
+                input('sleep...')
             else:print(f'{link} уже обработал')
 
 
