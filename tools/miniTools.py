@@ -34,7 +34,8 @@ def createStartDir():
             file.write(f'Domain,Link')
     if not os.path.exists(resultPath):
         with open(resultPath, 'a') as file:
-            file.write('Name,Email,Job Title,Location')
+            write = csv.writer(file)
+            write.writerow(['Name', 'Email', 'Job Title', 'Company', 'Phone', 'Location'])
     if not os.path.exists(COMPLETE_PATH):
         with open(COMPLETE_PATH, 'a') as file:
             file.write('Link\n')
@@ -50,12 +51,10 @@ def deleteTempDir():
     if os.path.exists(TEMP_DIR):shutil.rmtree(TEMP_DIR)
 
 
-# Шаблон записи данных в таблицу
-# Пока что не используется, для второго этапа
-def recordingPersonalData(targetFile, name, email, job, location):
+def recordingPersonalData(targetFile, name, email, job, company, phone, location):
     with open(targetFile, 'a+') as file:
         write = csv.writer(file)
-        write.writerow([name, email, job, location])
+        write.writerow([name, email, job, company, phone, location])
 
 # Записываем домен в файлик, что бы
 # можно было отслеживать пройденные
