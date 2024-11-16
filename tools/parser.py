@@ -16,7 +16,7 @@ def parserEmail(driver):
 def parserName(driver):
     try:
         name = driver.find_element(By.CLASS_NAME, 'zp_d9irS.EditTarget').text
-        if '---' in name:name = name.split('---')[1]
+        if '---' in name:name = name.split('---')[0]
     except:name = 'Not defined'
     finally:return name
 
