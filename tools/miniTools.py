@@ -31,7 +31,8 @@ def createStartDir():
     if not os.path.exists(doneDomainFile):open(doneDomainFile, 'a').close()
     if not os.path.exists(firstStepPath):
         with open(firstStepPath, 'a') as file:
-            file.write(f'Domain,Link')
+            write = csv.writer(file)
+            write.writerow(['Domain', 'Link'])
     if not os.path.exists(resultPath):
         with open(resultPath, 'a') as file:
             write = csv.writer(file)
