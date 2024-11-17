@@ -4,5 +4,10 @@ def url(domain):
 
 
 def urlSearch(page, job, location, industry, minEmpl, maxEmpl):
-    url = f'https://app.apollo.io/#/people?sortAscending=false&sortByField=[none]&page={page}&personSeniorities[]={job}&personLocations[]={location}&organizationIndustryTagIds[]={industry}&organizationNumEmployeesRanges[]={minEmpl},{maxEmpl}'
+    url = (f'https://app.apollo.io/#/people?sortAscending=false'
+            f'&sortByField=%5Bnone%5D&personSeniorities[]={job}'
+            f'&organizationNumEmployeesRanges[]={minEmpl}%2C{maxEmpl}'
+            f'&organizationIndustryTagIds[]={industry}'
+            f'&personLocations[]={location}'
+            f'&page={page}') 
     return url

@@ -41,7 +41,6 @@ def main():
     with open(firstStepPath, 'r') as file:
         number_link, complite_link = 0, 0
         for row in csv.DictReader(file):
-            domain = row['Domain']
             link = row['Link']
             if link not in LIST_LINK_DONE:
                 number_link+=1
