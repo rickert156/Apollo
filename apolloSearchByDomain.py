@@ -17,7 +17,6 @@ chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
 chrome_options.add_experimental_option('useAutomationExtension', False)
 chrome_options.add_argument("start-maximized")
 
-driver = webdriver.Chrome(options=chrome_options)
 
 def parserLinks(driver, domain):
     SET_LINK = set()
@@ -37,6 +36,7 @@ def parserLinks(driver, domain):
     except Exception as err:print(f'Error: {err}')
 
 def main():
+    driver = webdriver.Chrome(options=chrome_options)
     baseDir, domainDoc, domain = 'Base', 'domain.csv', False
     targetBase = f'{baseDir}/{domainDoc}'
     

@@ -18,13 +18,12 @@ chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
 chrome_options.add_experimental_option('useAutomationExtension', False)
 chrome_options.add_argument("start-maximized")
 
-driver = webdriver.Chrome(options=chrome_options)
 
 def parserLinks(driver):
     SET_LINK = set()
     patternLink, antiPattern = '#/people/', '/tags'
-    print('Пауза в 10 секунд')
-    time.sleep(10)
+    print('Пауза в 15 секунд')
+    time.sleep(15)
     print('Начинаем собирать ссылки')
     try:
         for links in driver.find_elements(By.TAG_NAME, 'a'):
@@ -42,6 +41,7 @@ def parserLinks(driver):
 
 
 def main():
+    driver = webdriver.Chrome(options=chrome_options)
     driver.get('https://app.apollo.io/#/')
     
     industry, jobTitle, location, minEmpl, maxEmpl, maxPage = menu()

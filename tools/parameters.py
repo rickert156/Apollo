@@ -3,6 +3,15 @@ def Industry(params):
     params = str(params)
     if params == '1':params = '5567cd877369644cf94b0000'
     if params == '2':params = '5567cdb773696439a9080000'
+    if params == '3':params = '5567ce237369644ee5490000' # банкинг
+    if params == '4':params = '5567cd8b736964540d0f0000' # computer games
+    if params == '5':params = '5567cd4e7369643b70010000' # computer softwate
+    if params == '6':params = ''
+    if params == '7':params = ''
+    if params == '8':params = ''
+    if params == '9':params = ''
+    if params == '10':params = ''
+    
     
     else:params = '5567cd877369644cf94b0000' # Computer & Network Security
     print(f'[*] {params} [*]')

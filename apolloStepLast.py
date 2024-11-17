@@ -17,7 +17,6 @@ chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
 chrome_options.add_experimental_option('useAutomationExtension', False)
 chrome_options.add_argument("start-maximized")
 
-driver = webdriver.Chrome(options=chrome_options)
 
 def lead(driver):
     global resultPath
@@ -36,6 +35,7 @@ def lead(driver):
     print(f'{YELLOW}Data recorded{RESET}\n')
 
 def main():
+    driver = webdriver.Chrome(options=chrome_options)
     readDoneLink()
     driver.get('https://app.apollo.io/#/')
     with open(firstStepPath, 'r') as file:
