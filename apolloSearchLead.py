@@ -5,6 +5,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time, csv
 from tools.url import urlSearch
 from tools.miniTools import createStartDir
+from tools.menu import menu
 from tools.parameters import testing
 
 profileChrome = 'ProfileChrome'
@@ -22,8 +23,11 @@ driver = webdriver.Chrome(options=chrome_options)
 
 def main():
     driver.get('https://app.apollo.io/#/')
-    input('...')
-    test_url = urlSearch(1, 'owner', 'United States', '5567cd4e7369643b70010000')
+    
+    menu()
+
+    # Пример
+    test_url = urlSearch(1, 'owner', 'United States', '5567cd4e7369643b70010000', 1, 200)
     driver.get(test_url)
     input('...')
 

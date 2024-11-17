@@ -3,6 +3,6 @@ def url(domain):
     return url
 
 
-def urlSearch(page, job, location, industry):
-    url = f'https://app.apollo.io/#/people?sortAscending=false&sortByField=[none]&page={page}&personSeniorities[]={job}&personLocations[]={location}&organizationIndustryTagIds[]={industry}'
+def urlSearch(page, job, location, industry, minEmpl, maxEmpl):
+    url = f'https://app.apollo.io/#/people?sortAscending=false&sortByField=[none]&page={page}&personSeniorities[]={job}&personLocations[]={location}&organizationIndustryTagIds[]={industry}&organizationNumEmployeesRanges[]={minEmpl},{maxEmpl}'
     return url
