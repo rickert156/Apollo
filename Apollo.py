@@ -1,8 +1,8 @@
 import os
 from tools.colors import RED, GREEN, YELLOW, BLUE, RESET
-from apolloSearchByDomain import main as mode_search_by_domain
-from apolloSearchLead import main as mode_classic
-from apolloStepLast import main as mode_final_collection
+from apollo.apolloSearchByDomain import main as mode_search_by_domain
+from apollo.apolloSearchLead import main as mode_classic
+from apollo.apolloStepLast import main as mode_final_collection
 
 def main():
     try:
