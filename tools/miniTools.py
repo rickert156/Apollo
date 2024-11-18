@@ -47,7 +47,9 @@ def createStartDir():
         with open(DOMAIN_FILE_PATH, 'a+') as file:
             write = csv.writer(file)
             write.writerow(['Company', 'Domain'])
-
+    if not os.path.exists(f'{DONE_DIR}/{DONE_FILE}'):
+        with open(f'{DONE_DIR}/{DONE_FILE}', 'a+') as file:
+            file.write('...')
 
 def createTempDir():
     global TEMP_DIR
