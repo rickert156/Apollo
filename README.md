@@ -19,15 +19,12 @@ pip install -r requirements.txt
 python3 Apollo.py
 ```
 По меню выбираем нужный пункт. 
-<<<<<<< HEAD
 <div align="center">
   <img src="https://github.com/rickert156/rickert156/blob/main/assets/apollo_menu.png" alt="menu">
 </div>
 
 ### Для парсера нужен аккаунта Apollo
 
-=======
 ### Для парсера нужен аккаунта Apollo
 
 ### Меню пока что не совсем корректно работает
->>>>>>> 889a646 (Fix parser)
