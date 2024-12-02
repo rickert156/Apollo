@@ -34,12 +34,6 @@ def createStartDir():
     if not os.path.exists(DOMAIN_BASE):os.makedirs(DOMAIN_BASE);print(f'\tCREATE {GREEN}{DOMAIN_BASE}{RESET}')
     if not os.path.exists(DONE_DIR):os.makedirs(DONE_DIR);print(f'\tCREATE {GREEN}{DONE_DIR}{RESET}')
     if not os.path.exists(FIRST_STEP_DIR):os.makedirs(FIRST_STEP_DIR);print(f'\tCREATE {GREEN}{FIRST_STEP_DIR}{RESET}')
-    if not os.path.exists(BASE_DIR):os.makedirs(BASE_DIR)
-    if not os.path.exists(RESULT_DIR):os.makedirs(RESULT_DIR)
-    if not os.path.exists(DOMAIN_BASE):os.makedirs(DOMAIN_BASE)
-    if not os.path.exists(DONE_DIR):os.makedirs(DONE_DIR)
-    if not os.path.exists(FIRST_STEP_DIR):os.makedirs(FIRST_STEP_DIR)
-    if not os.path.exists(doneDomainFile):open(doneDomainFile, 'a').close()
     if not os.path.exists(firstStepPath):
         with open(firstStepPath, 'a') as file:
             write = csv.writer(file)
@@ -65,9 +59,7 @@ def createStartDir():
             write = csv.writer(file)
             write.writerow('Domain')
             print(f'\tCREATE {RED}{doneDomainFile}{RESET}')
-    if not os.path.exists(f'{DONE_DIR}/{DONE_FILE}'):
-        with open(f'{DONE_DIR}/{DONE_FILE}', 'a+') as file:
-            file.write('...')
+    
 
 def createTempDir():
     global TEMP_DIR
