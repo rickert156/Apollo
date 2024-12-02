@@ -50,6 +50,7 @@ def main():
                 time.sleep(10)
                 lead(driver)
                 moveLink(link)
+                time.sleep(20)
             else:complite_link+=1;print(f'{BLUE}[{complite_link}]{link} Complete{RESET}')
 
 
