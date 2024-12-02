@@ -1,5 +1,8 @@
 import os, shutil, csv
+<<<<<<< HEAD
 from tools.colors import RED, GREEN, RESET
+=======
+>>>>>>> 889a646 (Fix parser)
 
 BASE_START_FILE = 'domain.csv'
 BASE_DIR = 'Base'
@@ -26,36 +29,60 @@ LIST_LINK_DONE = []
 # и дирукторию Domain
 def createStartDir():
     global DOMAIN_BASE, RESULT_DIR, DONE_DIR
+<<<<<<< HEAD
     if not os.path.exists(BASE_DIR):os.makedirs(BASE_DIR);print(f'\tCREATE {GREEN}{BASE_DIR}{RESET}')
     if not os.path.exists(RESULT_DIR):os.makedirs(RESULT_DIR);(f'\tCREATE {GREEN}{RESULT_DIR}{RESET}')
     if not os.path.exists(DOMAIN_BASE):os.makedirs(DOMAIN_BASE);print(f'\tCREATE {GREEN}{DOMAIN_BASE}{RESET}')
     if not os.path.exists(DONE_DIR):os.makedirs(DONE_DIR);print(f'\tCREATE {GREEN}{DONE_DIR}{RESET}')
     if not os.path.exists(FIRST_STEP_DIR):os.makedirs(FIRST_STEP_DIR);print(f'\tCREATE {GREEN}{FIRST_STEP_DIR}{RESET}')
+=======
+    if not os.path.exists(BASE_DIR):os.makedirs(BASE_DIR)
+    if not os.path.exists(RESULT_DIR):os.makedirs(RESULT_DIR)
+    if not os.path.exists(DOMAIN_BASE):os.makedirs(DOMAIN_BASE)
+    if not os.path.exists(DONE_DIR):os.makedirs(DONE_DIR)
+    if not os.path.exists(FIRST_STEP_DIR):os.makedirs(FIRST_STEP_DIR)
+    if not os.path.exists(doneDomainFile):open(doneDomainFile, 'a').close()
+>>>>>>> 889a646 (Fix parser)
     if not os.path.exists(firstStepPath):
         with open(firstStepPath, 'a') as file:
             write = csv.writer(file)
             write.writerow(['Domain', 'Link'])
+<<<<<<< HEAD
             print(f'\tCREATE {RED}{firstStepPath}{RESET}')
+=======
+>>>>>>> 889a646 (Fix parser)
     if not os.path.exists(resultPath):
         with open(resultPath, 'a') as file:
             write = csv.writer(file)
             write.writerow(['Name', 'Email', 'Job Title', 'Company', 'Phone', 'Location'])
+<<<<<<< HEAD
             print(f'\tCREATE {RED}{resultPath}{RESET}')
+=======
+>>>>>>> 889a646 (Fix parser)
     if not os.path.exists(COMPLETE_PATH):
         with open(COMPLETE_PATH, 'a') as file:
             write = csv.writer(file)
             write.writerow(['Link'])
+<<<<<<< HEAD
             print(f'\tCREATE {RED}{COMPLETE_PATH}{RESET}')
+=======
+>>>>>>> 889a646 (Fix parser)
     if not os.path.exists(DOMAIN_FILE_PATH):
         with open(DOMAIN_FILE_PATH, 'a+') as file:
             write = csv.writer(file)
             write.writerow(['Company', 'Domain'])
+<<<<<<< HEAD
             print(f'\tCREATE {RED}{DOMAIN_FILE_PATH}{RESET}')
     if not os.path.exists(doneDomainFile):
         with open(doneDomainFile, 'a+') as file:
             write = csv.writer(file)
             write.writerow('Domain')
             print(f'\tCREATE {RED}{doneDomainFile}{RESET}')
+=======
+    if not os.path.exists(f'{DONE_DIR}/{DONE_FILE}'):
+        with open(f'{DONE_DIR}/{DONE_FILE}', 'a+') as file:
+            file.write('...')
+>>>>>>> 889a646 (Fix parser)
 
 def createTempDir():
     global TEMP_DIR
