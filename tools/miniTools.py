@@ -1,8 +1,5 @@
 import os, shutil, csv
-<<<<<<< HEAD
 from tools.colors import RED, GREEN, RESET
-=======
->>>>>>> 889a646 (Fix parser)
 
 BASE_START_FILE = 'domain.csv'
 BASE_DIR = 'Base'
