@@ -3,8 +3,5 @@
 venv/
 __pycache__/
 ProfileChrome/
-<<<<<<< HEAD
 Result/
-=======
->>>>>>> 889a646 (Fix parser)
 Base/
