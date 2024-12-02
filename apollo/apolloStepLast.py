@@ -29,10 +29,11 @@ def lead(driver):
     job = parserJobTitle(driver);print(f'{GREEN}Job Title: {job}{RESET}')
     company = parserCompany(driver);print(f'{GREEN}Company: {company}{RESET}')
     phone = parserPhone(driver);print(f'{GREEN}Phone: {phone}{RESET}')
-    location = parserLocation(driver);print(f'{GREEN}Location: {location}{RESET}')
+    location = parserLocation(driver);print(f'{GREEN}Location: {location}{RESET}\n')
     
-    recordingPersonalData(resultPath, name, email, job, company, phone, location)
-    print(f'{YELLOW}Data recorded{RESET}\n')
+    if '@' in email:
+        recordingPersonalData(resultPath, name, email, job, company, phone, location)
+        print(f'{YELLOW}Data recorded{RESET}\n')
 
 def main():
     driver = webdriver.Chrome(options=chrome_options)

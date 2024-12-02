@@ -10,9 +10,6 @@ from tools.miniTools import createStartDir, recordingResultFirstStep
 profileChrome = 'ProfileChrome'
 
 chrome_options = Options()
-
-chrome_options.add_argument('--headless')
-
 # Подключение своего профиля
 chrome_options.add_argument(f'user-data-dir={profileChrome}')
 chrome_options.add_argument("--disable-blink-features")
