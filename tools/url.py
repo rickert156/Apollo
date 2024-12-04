@@ -11,3 +11,9 @@ def urlSearch(page, job, location, industry, minEmpl, maxEmpl):
             f'&personLocations[]={location}'
             f'&page={page}') 
     return url
+
+def urlSearchCompany(domain):
+    url = f'https://app.apollo.io/#/companies?page=1&sortAscending=false&sortByField=recommendations_score&qOrganizationName={domain}'
+    return url
+
+
