@@ -13,7 +13,7 @@ def Industry(params):
     if params == '10':params = ''
     
     
-    else:params = '5567cd877369644cf94b0000' # Computer & Network Security
+    #else:params = '5567cd877369644cf94b0000' # Computer & Network Security
     print(f'[*] {params} [*]')
     return params
 
@@ -36,7 +36,7 @@ def JobTitle(params):
 
 def Location(params):
     params = params.strip()
-    params = str(params)
+    #params = str(params)
     if params == '1':params = 'United States'
     if params == '2':params = 'Canada'
     if params == '3':params = 'Australia'
@@ -44,7 +44,7 @@ def Location(params):
     if params == '5':params = 'Russia'
     if params == '6':params = 'Ukraine'
 
-    else:params = 'United States'
+    #else:params = 'United States'
     print(f'[*] {params}  [*]')
     return params
 

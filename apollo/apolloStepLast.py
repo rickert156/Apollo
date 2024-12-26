@@ -5,6 +5,7 @@ import time, csv
 from tools.colors import RED, RESET, GREEN, YELLOW, BLUE
 from tools.miniTools import createStartDir, firstStepPath, moveLink, LIST_LINK_DONE, readDoneLink, recordingPersonalData, resultPath
 from tools.parser import parserName, parserJobTitle, parserLocation, parserCompany, parserEmail, parserPhone, checkModal, clickButtonEmail
+from config import service_parser, category
 
 profileChrome = 'ProfileChrome'
 
@@ -32,7 +33,7 @@ def lead(driver):
     location = parserLocation(driver);print(f'{GREEN}Location: {location}{RESET}\n')
     
     if '@' in email:
-        recordingPersonalData(resultPath, name, email, job, company, phone, location)
+        recordingPersonalData(resultPath, name, email, job, company, phone, location, category, service_parser)
         print(f'{YELLOW}Data recorded{RESET}\n')
 
 def main():

@@ -3,13 +3,14 @@ def url(domain):
     return url
 
 
-def urlSearch(page, job, location, industry, minEmpl, maxEmpl):
+def urlSearch(page, industry, job, location, minEmpl, maxEmpl):
     url = (f'https://app.apollo.io/#/people?sortAscending=false'
             f'&sortByField=%5Bnone%5D&personSeniorities[]={job}'
             f'&organizationNumEmployeesRanges[]={minEmpl}%2C{maxEmpl}'
             f'&organizationIndustryTagIds[]={industry}'
             f'&personLocations[]={location}'
             f'&page={page}') 
+    print(url)
     return url
 
 def urlSearchCompany(domain):

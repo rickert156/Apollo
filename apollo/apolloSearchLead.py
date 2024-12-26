@@ -47,7 +47,7 @@ def main():
     industry, jobTitle, location, minEmpl, maxEmpl, maxPage = menu()
     pushinka = '-'*20
     for page in range(1, int(maxPage)+1):
-        urlRequest = urlSearch(page, jobTitle, location, industry, minEmpl, maxEmpl)
+        urlRequest = urlSearch(page, industry, jobTitle, location, minEmpl, maxEmpl)
         print(f'{pushinka} Page {page} {pushinka}')
         driver.get(urlRequest)
         driver.refresh()

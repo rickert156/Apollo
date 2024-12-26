@@ -1,12 +1,14 @@
 import os, shutil, csv
 from tools.colors import RED, GREEN, RESET
+from config import machine, category
 
 BASE_START_FILE = 'domain.csv'
 BASE_DIR = 'Base'
 DOMAIN_FILE_PATH = f'{BASE_DIR}/{BASE_START_FILE}'
 DOMAIN_BASE = 'Domain'
 RESULT_DIR = 'Result'
-RESULT_FILE = 'apollo_result.csv'
+RESULT_FILE = f'{category}__{machine}.csv'
+if ' ' in RESULT_FILE:RESULT_FILE = RESULT_FILE.replace(' ', '_')
 TEMP_DIR = 'tmp'
 TEMP_FILE = 'tmp.csv'
 DONE_DIR = 'Done'
@@ -39,7 +41,7 @@ def createStartDir():
     if not os.path.exists(resultPath):
         with open(resultPath, 'a') as file:
             write = csv.writer(file)
-            write.writerow(['Name', 'Email', 'Job Title', 'Company', 'Phone', 'Location'])
+            write.writerow(['Name', 'Email', 'Job Title', 'Company', 'Phone', 'Location', 'Category', 'Parser'])
             print(f'\tCREATE {RED}{resultPath}{RESET}')
     if not os.path.exists(COMPLETE_PATH):
         with open(COMPLETE_PATH, 'a') as file:
@@ -66,10 +68,10 @@ def deleteTempDir():
     global TEMP_DIR
     if os.path.exists(TEMP_DIR):shutil.rmtree(TEMP_DIR)
 
-def recordingPersonalData(targetFile, name, email, job, company, phone, location):
+def recordingPersonalData(targetFile, name, email, job, company, phone, location, category, service_parser):
     with open(targetFile, 'a+') as file:
         write = csv.writer(file)
-        write.writerow([name, email, job, company, phone, location])
+        write.writerow([name, email, job, company, phone, location, category, service_parser])
 
 def recordDomain(domain):
     global DONE_DIR, DONE_FILE
