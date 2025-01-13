@@ -22,8 +22,8 @@ chrome_options.add_argument("start-maximized")
 def parserLinks(driver):
     SET_LINK = set()
     patternLink, antiPattern = '#/people/', '/tags'
-    print('Пауза в 15 секунд')
-    time.sleep(15)
+    print('Пауза в 5 секунд')
+    time.sleep(5)
     print('Начинаем собирать ссылки')
     try:
         for links in driver.find_elements(By.TAG_NAME, 'a'):
