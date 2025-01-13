@@ -6,7 +6,7 @@ def Industry(params):
     if params == '3':params = '5567ce237369644ee5490000' # банкинг
     if params == '4':params = '5567cd8b736964540d0f0000' # computer games
     if params == '5':params = '5567cd4e7369643b70010000' # computer softwate
-    if params == '6':params = ''
+    if params == '6':params = '5567e0bc7369641d11550200' # Investment Management
     if params == '7':params = ''
     if params == '8':params = ''
     if params == '9':params = ''

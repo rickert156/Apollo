@@ -9,6 +9,7 @@ def menu():
         3. Banking
         4. Computer Games
         5. Computer Software
+        6. Investment Management
         >>> {RESET}"""))
     industry  = Industry(industry)
     
