@@ -10,6 +10,11 @@ def menu():
         4. Computer Games
         5. Computer Software
         6. Investment Management
+        7. Graphic Design
+        8. Alternative medicine
+        9. Broadcast media
+        10. Business supplies & Equipment(товары и оборудование для бизнеса)
+        11. Сommercial real estate 
         >>> {RESET}"""))
     industry  = Industry(industry)
     

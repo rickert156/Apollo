@@ -7,11 +7,13 @@ def Industry(params):
     if params == '4':params = '5567cd8b736964540d0f0000' # computer games
     if params == '5':params = '5567cd4e7369643b70010000' # computer softwate
     if params == '6':params = '5567e0bc7369641d11550200' # Investment Management
-    if params == '7':params = ''
-    if params == '8':params = ''
-    if params == '9':params = ''
-    if params == '10':params = ''
-    
+    if params == '7':params = '5567cd4d73696439d9040000' # Graphic Design
+    if params == '8':params = '5567e27c7369642ade490000' # Alternative medicine
+    if params == '9':params = '5567e0f973696416d34e0200' # Broadcast media
+    if params == '10':params = '5567e0fa73696410e4c51200' # Business supplies & Equipment(товары и оборудование для бизнеса)
+    if params == '11':params = '5567e1887369641d68d40100' # Сommercial real estate
+    if params == '12':params = '' #
+    if params == '13':params = '' #
     
     #else:params = '5567cd877369644cf94b0000' # Computer & Network Security
     print(f'[*] {params} [*]')
